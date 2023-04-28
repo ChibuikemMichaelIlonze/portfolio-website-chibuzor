@@ -1,0 +1,9 @@
+@import '../../App.scss';
+
+.landing{
+    font-family: $font;
+    perspective: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: $height;
+}

@@ -1,0 +1,49 @@
+@import '../../App.scss';
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .link{
+        // position: absolute;
+        text-decoration: none;
+        color: $text-color;
+        font-size: $large-text;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .menu{
+        .one{
+            position: absolute;
+            top: calc($wk-height * 0.05);
+            left: calc($wk-width * 0.075);
+        }
+        .two{
+            position: absolute;
+            top: calc($wk-height * 0.085);
+            left: calc($wk-width * 0.07);
+        }
+        .three{
+            position: absolute;
+            top: calc($wk-height * 0.12);
+            left: calc($wk-width * 0.075);
+        }
+        .four{
+            position: absolute;
+            top: calc($wk-height * 0.05);
+            right: calc($wk-width * -0.27);
+        }
+        .five{
+            position: absolute;
+            top: calc($wk-height * 0.085);
+            right: calc($wk-width * -0.31);
+        }
+        .six{
+            position: absolute;
+            top: calc($wk-height * 0.12);
+            right: calc($wk-width * -0.27);
+        }
+    }
+}

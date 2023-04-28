@@ -1,0 +1,119 @@
+@import '../../App.scss';
+
+.hero{
+    position: relative;
+    height: $height;
+    width: $width;
+    background: radial-gradient(
+        circle,
+        rgba($black, 0.9),
+        rgba($black, 1)),
+    url(../../assets/japmount.svg), no-repeat center;
+    background-size: cover;
+    font-family: $des-font;
+    overflow: hidden;
+
+    img{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: scale(1.2);
+        filter: grayscale(100%);
+    }
+
+    .overlay{
+        position: absolute;
+        height: $height;
+        width: $width;
+        background: $black;
+        opacity: 0.7;
+
+        h1{
+            text-align: center;
+            color: rgba($text-color, 1);
+            font-weight: 300;
+        }
+    }
+
+    section{
+        position: relative;
+        width: $wk-width;
+        height: $height;
+        overflow: hidden;
+
+        .tape{
+            // position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0.2em 0;
+                font-family: $font;
+                font-weight: 600;
+                font-size: $text;
+                white-space: nowrap;
+                animation: animate 40s linear infinite reverse;
+                animation-delay: -40s;
+            }
+
+            a{
+                text-decoration: none;
+                padding: 0 0.1em;
+            }
+
+            & div:nth-child(2){
+                animation: animate2 40s linear infinite reverse;
+                animation-delay: -20s;
+                // position: relative
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &.one{
+                transform: rotate(100deg) translateY(37em) translateX(55em);
+            }
+            &.two{
+                transform: rotate(-90deg) translateY(-48em) translateX(3em);
+            }
+        }
+        
+        .one{
+            background: $black;
+            color: $text-color;
+            // transform: rotate(90deg);
+            a{
+                color: $text-color;
+                &:hover{
+                    color: rgba($sub, 0.3);
+                }
+            }
+        }
+
+        .two{
+            background: rgba($text-color, 1);
+            a{
+                color: $black;
+                &:hover{
+                    color: rgba($accent, 0.3);
+                }
+            }
+        }
+
+        @keyframes animate {
+            0%{ transform: translateX(100%);}
+            100%{ transform: translateX(-100%);}
+        }
+        @keyframes animate2 {
+            0%{ transform: translateX(0);}
+            100%{ transform: translateX(-200%);}
+        }
+    }
+}

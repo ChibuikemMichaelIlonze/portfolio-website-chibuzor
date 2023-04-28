@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+footer{
+    position: absolute;
+    width: $width;
+    bottom: 0;
+    background: transparent;
+    text-align: center;
+    color: $text-color;
+
+    p{
+        width: $width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span{
+            padding: 0 0.2em;
+        }
+    }
+}

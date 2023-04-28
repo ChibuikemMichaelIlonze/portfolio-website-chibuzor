@@ -1,0 +1,8 @@
+@import '../../App.scss';
+
+.blob{
+    width: calc($width * 1);
+    svg{
+        width: $width;
+    }
+}

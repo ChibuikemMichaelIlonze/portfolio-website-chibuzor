@@ -1,0 +1,41 @@
+@import '../../App.scss';
+
+.pulse{
+    position: relative;
+    height: $height;
+    width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+
+
+    .circle{
+        position: relative;
+        height: calc($wk-height * 0.06);
+        width: calc($wk-width * 0.06);
+        background: $text-color;
+        border-radius: $radius;
+        display: grid;
+        place-items: center;
+
+        &:before,
+        &:after{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: $text-color;
+            border-radius: $radius;
+            opacity: 0.6;
+        }
+
+        &:before{animation: pulse 2s ease-out infinite;}
+        &:after{animation: pulse 2s 1s ease-out infinite;}
+
+        @keyframes pulse {
+            100%{transform: scale(2.5); opacity: 0;}
+        }
+    }
+}

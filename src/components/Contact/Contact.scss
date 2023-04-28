@@ -1,0 +1,85 @@
+@import '../../App.scss';
+
+.message{
+    height: $height;
+    width: $width;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: rgba($black, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    form{
+        position: relative;
+        z-index: 11;
+        height: calc($wk-height * 0.35);
+        width: calc($wk-width * 0.5);
+        background: $black;
+        padding: 2em;
+        font-family: $font;
+        color: $text-color;
+
+        #close{
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            padding: 0.2em;
+            cursor: pointer;
+            color: $text-color;
+            background: transparent;
+            outline: none;
+            border: none;
+        }
+
+        h1, p{
+            font-family: $des-font;
+        }
+
+        div{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            input, textarea{
+                position: relative;
+                width: 100%;
+                padding: 0.6em;
+                border: none;
+                resize: none;
+                outline: none;
+                font-size: $text;
+                margin: 0.5em 0;
+                color: $text-color;
+                background: transparent;
+                border-bottom: 0.03em solid $text-color;
+            }
+
+            label{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.6em 0;
+                font-size: $font;
+                color: #fff;
+                pointer-events: none;
+                transition: .5s;
+
+                &.active{
+                    top: -0.9em;
+                    left: 0;
+                    color: rgba($text-color, 0.5);
+                    font-size: $small-text;
+                    pointer-events: none;
+                }
+            }
+
+            textarea{
+                height: calc($wk-height * 0.13);
+            }
+        }
+    }
+}
+
