@@ -10,6 +10,10 @@
         text-decoration: none;
         color: $text-color;
         font-size: $large-text;
+
+        &.active{
+            color: $accent;
+        }
     }
 }
 

@@ -3,42 +3,9 @@ import './Hero.scss'
 import 'animate.css'
 import nancy from '../../assets/nanci.png'
 import Footer from '../Footer/Footer'
+import Titles from '../Titles/Titles'
 
 const Hero = () => {
-
-    const [changeText, setChangeText] = useState('')
-    const texts = ['Data Analyst', 'Data Story Teller', 'Data Technical Writer'];
-    
-
-    // useEffect(() => {
-    //     let i = 0;
-    //     let j = 0;
-    //     let isDeleting = false;
-    //     const speed = 300;
-    //     const delay = 6500;
-    //     const intervalId = setInterval(() => {
-    //       if (isDeleting) {
-    //         setChangeText(texts[i].substring(0, j - 1));
-    //         j--;
-    //         if (j === 0) {
-    //           isDeleting = false;
-    //           i = (i + 1) % texts.length;
-    //         }
-    //       } else {
-    //         setChangeText(texts[i].substring(0, j + 1));
-    //         j++;
-    //         if (j === texts[i].length) {
-    //           isDeleting = true;
-    //           setTimeout(() => {
-    //             isDeleting = false;
-    //           }, delay);
-    //         }
-    //       }
-    //     }, speed);
-    //     return () => clearInterval(intervalId);
-    //   }, []);
-      
-
 
   return (
     <div className='hero'>
@@ -86,6 +53,8 @@ const Hero = () => {
             </div>
           </div>
         </section>
+
+        <Titles />
 
         <Footer />
     </div>

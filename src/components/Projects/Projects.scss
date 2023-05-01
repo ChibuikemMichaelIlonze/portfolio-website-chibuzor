@@ -1,0 +1,25 @@
+@import '../../App.scss';
+
+.projects{
+    position: fixed;
+   height: calc($height * 1); 
+   width: calc($width * 1);
+   top: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: rgba($black, 0.4);
+   color: $text-color;
+   z-index: 2;
+
+   .box{
+      height: calc($wk-height * 0.3);
+      width: calc($wk-width * 0.5);
+      background: $black;
+      border: 0.3em solid $main-color;
+      
+      button{
+         color: $black;
+      }
+   }
+}

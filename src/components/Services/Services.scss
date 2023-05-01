@@ -13,14 +13,48 @@
    z-index: 2;
 
    .box{
+      position: relative;
       height: calc($wk-height * 0.3);
       width: calc($wk-width * 0.5);
       background: $black;
       border: 0.3em solid $main-color;
+      padding: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      font-family: $font;
       
       button{
+         position: absolute;
+         top: 0;
+         left: 0;
          color: $black;
+      }
+
+      .service{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 0.5em;
+         border-radius: $small-radius;
+         row-gap: 1em;
+         background: rgba($text-color, 0.1);
+
+         &:hover{
+            background: rgba($accent, 0.2);
+         }
       }
    }
 
+}
+
+@media screen and (max-width: 600px) {
+   .services{
+      .box{
+         position: relative;
+         overflow-x: hidden;
+      }
+   }
 }

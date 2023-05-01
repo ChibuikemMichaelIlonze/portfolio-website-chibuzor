@@ -15,9 +15,15 @@ const Contact = ({ closeModal }) => {
 
   const handleCloseClick = e => {
     setIsClosing(true);
-    setTimeout(closeModal, 5000);
+    setTimeout(() => {
+      setIsClosing(false);
+      closeModal();
+    }, 500);
   };
 
+  const handleFormClick = e => {
+    e.stopPropagation();
+  }
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -25,17 +31,20 @@ const Contact = ({ closeModal }) => {
   };
 
   function handleAnimationEnd() {
-    closeModal()
+    if (isClosing) {
+      setIsClosing(false);
+      closeModal();
+    }
   }
 
   return (
-    <div className={`message animate__animated ${isClosing ? 'animate__fadeOutUp' : 'animate__fadeInUp'}`}>      
-        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd}>
-            <button onClick={handleCloseClick} id='close'>
+    <div className={`message animate__animated ${isClosing ? 'animate__fadeOutUp' : 'animate__fadeInUp'}`} onClick={handleCloseClick}>      
+        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd} onClick={handleFormClick}>
+            <button onClick={handleCloseClick} id='close' type='button'>
             <i className='fa-solid fa-x fa-2x'></i>
             </button>
 
-            <h1>So, You want to get in contact,</h1>
+            <h1>So, You want to get in contact?</h1>
             <p>Leave your details then</p>
 
             <div className='name'>
@@ -73,13 +82,15 @@ const Contact = ({ closeModal }) => {
             />
             <label
                 htmlFor='message'
-                className={formState.message ? 'active' : ''}
-            >
+                className={formState.message ? 'active' : ''}>
                 Message
             </label>
             </div>
 
-            <button type='submit'>Send Message</button>
+            <button type='submit' id='submit'>
+              Send Message
+              <span></span>
+            </button>
         </form>
     </div>
   );

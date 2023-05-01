@@ -1,0 +1,77 @@
+@import '../../App.scss';
+
+.tools{
+    position: fixed;
+    height: calc($height * 1); 
+    width: calc($width * 1);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($black, 0.4);
+    color: $text-color;
+    z-index: 2;
+
+    .box{
+        position: relative;
+        height: calc($wk-height * 0.3);
+        width: calc($wk-width * 0.5);
+        background: $black;
+        border: 0.3em solid $main-color;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1/1;
+        align-items: center;
+        gap: 3em;
+        padding: 1em;
+        
+        button{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $black;
+        }
+
+        .tool{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            img{
+                height: calc($wk-height * 0.05);
+                width: calc($wk-width * 0.05);
+                object-fit: contain;
+                aspect-ratio: 1/1;
+
+                &:hover + span{
+                    display: block;
+                }
+            }
+
+            // span{
+            //     display: none;
+            // }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tools{
+
+        .box{
+            button{
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+            }
+            position: relative;
+            overflow-x: hidden;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+.title{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    color: $text-color;
+    font-family: $font;
+
+    h2{
+        margin: 0.2em 0;
+        letter-spacing: 0.05em;
+        font-size: $large-text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.01em $text-color;
+    }
+}

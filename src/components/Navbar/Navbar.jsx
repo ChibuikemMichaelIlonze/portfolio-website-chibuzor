@@ -16,9 +16,13 @@ const Navbar = () => {
     setIsDoorOpen(true)
   }
 
-  function handleClick(){
-    setIsOpen(true)
-  }
+  const handleModalClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleModalOpen = () => {
+    setIsOpen(true);
+  };
 
   
 
@@ -29,14 +33,14 @@ const Navbar = () => {
           <span class='animate__slideInLeft'>Know more</span>
         </Link>
 
-        <Link to='/' className='link contact' onClick={handleClick}>
+        <Link to='/' className='link contact' onClick={handleModalOpen}>
           <i class="fa-solid fa-user fa-2x"></i>
           <span class='animate__slideInLeft'>Contact Me</span>
         </Link>
 
         {isOpen && (
           <div className="container">
-            <Contact closeModal={handleClick}/>
+            <Contact closeModal={handleModalClose}/>
           </div>
         )}
         

@@ -4,13 +4,14 @@
     height: $height;
     width: $width;
     position: absolute;
-    z-index: 10;
+    z-index: 9;
     top: 0;
     left: 0;
     background: rgba($black, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     form{
         position: relative;
@@ -21,6 +22,8 @@
         padding: 2em;
         font-family: $font;
         color: $text-color;
+        display: flex;
+        flex-direction: column;
 
         #close{
             position: absolute;
@@ -36,6 +39,9 @@
 
         h1, p{
             font-family: $des-font;
+        }
+        p{
+            color: $accent;
         }
 
         div{
@@ -57,10 +63,15 @@
                 border-bottom: 0.03em solid $text-color;
             }
 
+            &:focus,
+            &:valid{
+                border-bottom: 0.03em solid $accent;
+            }
+
             label{
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: 15%;
+                left: 1.5%;
                 padding: 0.6em 0;
                 font-size: $font;
                 color: #fff;
@@ -77,7 +88,56 @@
             }
 
             textarea{
-                height: calc($wk-height * 0.13);
+                height: calc($wk-height * 0.12);
+            }
+        }
+
+        #submit{
+            position: relative;
+            align-self: center;
+            outline: none;
+            border: none;
+            display: inline-block;
+            background: transparent;
+            padding: 0.5em 1.3em;
+            color: $text-color;
+            font-family: $font;
+            font-size: $text;
+            margin-top: 1em;
+            transition: all .3s ease-in-out;
+            overflow: hidden;
+            cursor: pointer;
+
+            span{
+                position: absolute;
+                display: block;
+
+                &:nth-child(1){
+                    width: 100%;
+                    left: -100%;
+                    bottom: 0.2em;
+                    height: 0.2em;
+                    background: linear-gradient(90deg, transparent, $accent);
+                    animation: btn-anim1 2s linear infinite;
+                }
+            }
+
+            @keyframes btn-anim1 {
+                0% {
+                  left: -100%;
+                }
+              
+                50%, 100% {
+                  left: 100%;
+                }
+              }
+
+            &:hover{
+                background: $accent;
+                box-shadow: 0.02em 0.02em 2em $accent,
+                            0.02em 0.02em 2em $accent,
+                            0.02em 0.02em 2em $accent,
+                            0.02em 0.02em 2em $accent;
             }
         }
     }
