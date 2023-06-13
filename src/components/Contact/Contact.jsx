@@ -23,8 +23,20 @@ const Contact = ({ closeModal }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    
+    const { name, message } = formState;
+    const email = "amandianalytics@gmail.com"
+    
+    const mailtoLink = `mailto:${email}?subject=Message from ${name}&body=${message}`;
+    
+    window.location.href = mailtoLink;
   };
+
+  function stopFormClose(e){
+    e.stopPropagation();
+  }
+  
+  
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -40,7 +52,7 @@ const Contact = ({ closeModal }) => {
 
   return (
     <div className={`message animate__animated ${isClosing ? 'animate__fadeOutUp' : 'animate__fadeInUp'}`} onClick={handleCloseClick}>      
-        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd} onClick={handleFormSubmit}>
+        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd} onClick={stopFormClose}>
             <button onClick={handleCloseClick} id='close' type='button'>
             <i className='fa-solid fa-x fa-2x'></i>
             </button>
@@ -88,7 +100,7 @@ const Contact = ({ closeModal }) => {
             </label>
             </div>
 
-            <button type='submit' id='submit'>
+            <button type='submit' id='submit' onClick={handleFormSubmit}>
               Send Message
               <span></span>
             </button>
