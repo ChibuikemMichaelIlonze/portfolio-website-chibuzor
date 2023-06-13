@@ -6,6 +6,9 @@
     left: 15%;
     color: $text-color;
     font-family: $font;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 
     h2{
         margin: 0.2em 0;

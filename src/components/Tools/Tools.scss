@@ -10,35 +10,60 @@
     justify-content: center;
     background: rgba($black, 0.4);
     color: $text-color;
-    z-index: 2;
+    z-index: 10;
 
     .box{
         position: relative;
         height: calc($wk-height * 0.3);
         width: calc($wk-width * 0.5);
-        background: $black;
-        border: 0.3em solid $main-color;
+        background: rgba($black, 1);
+        border: 0.1em solid $main-color;
+        border-radius: $small-radius;
         display: flex;
-        flex-wrap: wrap;
-        flex: 1/1;
         align-items: center;
-        gap: 3em;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1/2;
+        align-items: center;
+        gap: 2em;
         padding: 1em;
+        overflow-x: 0;
+
+        box-shadow: 0.02em 0.02em .3em rgba($accent, 0.1),
+                    0.02em 0.02em .5em rgba($accent, 0.1),
+                    0.02em 0.02em 1em rgba($accent, 0.1),
+                    0.02em 0.02em 5em rgba($accent, 0.1);
         
-        button{
+        h2{
+            font-family: $des-font;
+            font-size: $large-text;
             position: absolute;
             top: 0;
-            left: 0;
-            color: $black;
+        }
+
+        button{
+            position: absolute;
+            top: 1%;
+            left: 2%;
+            color: $text-color;
+            padding: .5em;
+            border-radius: $small-radius;
+            background: rgba($text-color, 0.1);
+            outline: none;
+            border: none;
+            cursor: pointer;
         }
 
         .tool{
             position: relative;
+            top: 8%;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+            padding: .2em;
+            border-radius: $small-radius;
 
             img{
                 height: calc($wk-height * 0.05);
@@ -51,24 +76,25 @@
                 }
             }
 
-            // span{
-            //     display: none;
-            // }
+            &:hover{
+                background: rgba($accent, 0.4);
+            }
         }
     }
 }
 
 @media screen and (max-width: 600px) {
     .tools{
+        width: 100%;
 
         .box{
             button{
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1;
+                // position: -webkit-sticky;
+                // position: sticky;
+                // top: 0;
+                // left: 0;
+                // width: 100%;
+                // z-index: 1;
             }
             position: relative;
             overflow-x: hidden;

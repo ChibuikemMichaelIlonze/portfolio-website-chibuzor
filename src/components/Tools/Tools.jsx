@@ -91,6 +91,7 @@ const Tools = ({ closeModal }) => {
   return (
     <div className='tools'>
         <div className="box">
+            <h2>Tools</h2>
             <button onClick={closeModal}>
                 <i class="fa-solid fa-arrow-left fa-2x"></i>
             </button>

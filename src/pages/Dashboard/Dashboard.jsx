@@ -33,7 +33,7 @@ const Dashboard = () => {
 
       {open && (
         <div className='container'>
-          <Menu />
+          <Menu/>
         </div>
       )}
     </div>

@@ -1,0 +1,97 @@
+@import '../../App.scss';
+
+.highlights{
+    position: fixed;
+    height: calc($height * 1); 
+    width: calc($width * 1);
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($black, 0.4);
+    color: $text-color;
+    z-index: 10;
+
+    .box{
+        position: relative;
+        height: calc($wk-height * 0.3);
+        width: calc($wk-width * 0.5);
+        background: $black;
+        border: 0.1em solid $main-color;
+        border-radius: $small-radius; 
+        font-family: $font;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        box-shadow: 0.02em 0.02em .3em rgba($sub, 0.1),
+                    0.02em 0.02em .5em rgba($sub, 0.1),
+                    0.02em 0.02em 1em rgba($sub, 0.1),
+                    0.02em 0.02em 5em rgba($sub, 0.1);
+
+        h2{
+            font-family: $des-font;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            font-size: $large-text;
+            width: 100%;
+            text-align: center;
+            background: $black;
+            padding: 0.2em;
+            z-index: 2;
+        }
+
+        button{
+            position: absolute;
+            top: 1%;
+            left: 2%;
+            color: $text-color;
+            padding: .5em;
+            border-radius: $small-radius;
+            background: rgba($text-color, 0.1);
+            outline: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .highlight{
+            position: relative;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            margin: 2em 0;
+            font-family: $font;
+
+            span{
+                position: relative;
+                width: calc($wk-width * 0.1);
+                padding-left: 2em;
+                border-left: 0.02em solid $text-color;
+
+                h4{
+                    margin: 0.5em 0;
+                }
+
+                a{
+                    color: $sub;
+                }
+
+                .dot{
+                    position: absolute;
+                    bottom: 0;
+                    left: -2.5%;
+                    height: .5em;
+                    width: .5em;
+                    border-radius: $radius;
+                    background: $accent;
+                }
+            }
+
+        }
+    }
+}

@@ -4,50 +4,170 @@
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 
-    .link{
-        // position: absolute;
-        text-decoration: none;
-        color: $text-color;
-        font-size: $large-text;
+    #home{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        color: $accent;
+        z-index: 11;
 
-        &.active{
-            color: $accent;
+        &:hover{
+            color: $sub;
+        }
+    }
+
+    #right, #left{
+        z-index: 9;
+
+        .link{
+            // position: absolute;
+            text-decoration: none;
+            color: $text-color;
+            font-size: $large-text;
+    
+            &.active{
+                color: $accent;
+            }
+        }
+    }
+
+
+    .carousel{
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .right, .left{
+            position: absolute;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 2em 0.4em;
+            border-radius: $small-radius;
+            color: $text-color;
+            transition: all .2s ease-out;
+            cursor: pointer;
+
+            &:hover{
+                background: rgba($text-color, 0.2);
+            }
         }
     }
 }
 
-@media screen and (min-width: 1020px) {
+
+@media screen and (min-width: 500px) {
     .menu{
-        .one{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #left, #right{
             position: absolute;
-            top: calc($wk-height * 0.05);
-            left: calc($wk-width * 0.075);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: calc($wk-height * 0.13);
+            
+            .link{
+                font-size: calc($text * 1.3);
+            }
         }
-        .two{
-            position: absolute;
-            top: calc($wk-height * 0.085);
-            left: calc($wk-width * 0.07);
+
+        #left{
+            top: 0;
+            left: calc($wk-width * 0.02);
         }
-        .three{
-            position: absolute;
-            top: calc($wk-height * 0.12);
-            left: calc($wk-width * 0.075);
+        #right{
+            right: calc($wk-width * 0.02);
+            bottom: 0;
+            text-align: right;
         }
-        .four{
-            position: absolute;
-            top: calc($wk-height * 0.05);
-            right: calc($wk-width * -0.27);
+
+        .carousel{
+            .right, .left{
+                top: calc($height * 0.45);
+                z-index: 99;
+            }
+
+            .right{
+                right: 0;
+            }
         }
-        .five{
-            position: absolute;
-            top: calc($wk-height * 0.085);
-            right: calc($wk-width * -0.31);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu{
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: 0;
+        
+
+        #right, #left{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 4em;
+
+            .link{
+                font-size: calc($text * 1.3);
+            }
+
+            .four{
+                margin-top: calc($wk-height * 0.14);
+            }
         }
-        .six{
-            position: absolute;
-            top: calc($wk-height * 0.12);
-            right: calc($wk-width * -0.27);
+
+        .carousel{
+            
+            .right, .left{
+                top: calc($wk-height * -0.05);
+            }
+
+            .right{
+                right: 2%;
+            }
+            .left{
+                left: 2%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .menu{
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: 0;
+        
+
+        #right, #left{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 2.5em;
+
+            .link{
+                font-size: calc($text * 1.3);
+            }
+
+            .four{
+                margin-top: calc($wk-height * 0.12);
+            }
         }
     }
 }

@@ -21,9 +21,10 @@ const Contact = ({ closeModal }) => {
     }, 500);
   };
 
-  const handleFormClick = e => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
     e.stopPropagation();
-  }
+  };
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -39,7 +40,7 @@ const Contact = ({ closeModal }) => {
 
   return (
     <div className={`message animate__animated ${isClosing ? 'animate__fadeOutUp' : 'animate__fadeInUp'}`} onClick={handleCloseClick}>      
-        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd} onClick={handleFormClick}>
+        <form className='animate__animated animate__fadeInUp'ref={formRef} onAnimationEnd={handleAnimationEnd} onClick={handleFormSubmit}>
             <button onClick={handleCloseClick} id='close' type='button'>
             <i className='fa-solid fa-x fa-2x'></i>
             </button>

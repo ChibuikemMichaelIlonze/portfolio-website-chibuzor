@@ -49,6 +49,7 @@ const Services = ({ closeModal }) => {
     <div className='services'>
 
       <div className='box'>
+        <h2>Services</h2>
         <button onClick={closeModal}>
           <i class="fa-solid fa-arrow-left fa-2x"></i>
         </button>

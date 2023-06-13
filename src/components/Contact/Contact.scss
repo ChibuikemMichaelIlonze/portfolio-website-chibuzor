@@ -16,7 +16,7 @@
     form{
         position: relative;
         z-index: 11;
-        height: calc($wk-height * 0.35);
+        height: calc($wk-height * 0.4);
         width: calc($wk-width * 0.5);
         background: $black;
         padding: 2em;
@@ -24,6 +24,7 @@
         color: $text-color;
         display: flex;
         flex-direction: column;
+        // overflow-y: hidden;
 
         #close{
             position: absolute;

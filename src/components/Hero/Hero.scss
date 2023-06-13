@@ -26,7 +26,7 @@
         height: $height;
         width: $width;
         background: $black;
-        opacity: 0.7;
+        opacity: 0.6;
 
         h1{
             text-align: center;
@@ -35,85 +35,37 @@
         }
     }
 
-    section{
-        position: relative;
-        width: $wk-width;
-        height: $height;
-        overflow: hidden;
+    aside{
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        gap: 1em;
 
-        .tape{
-            // position: relative;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            // justify-content: space-between;
+        a{
+            color: rgba($text-color, 0.6);
 
-            div{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-                padding: 0.2em 0;
-                font-family: $font;
-                font-weight: 600;
-                font-size: $text;
-                white-space: nowrap;
-                animation: animate 40s linear infinite reverse;
-                animation-delay: -40s;
-            }
-
-            a{
-                text-decoration: none;
-                padding: 0 0.1em;
-            }
-
-            & div:nth-child(2){
-                animation: animate2 40s linear infinite reverse;
-                animation-delay: -20s;
-                // position: relative
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            &.one{
-                transform: rotate(100deg) translateY(37em) translateX(55em);
-            }
-            &.two{
-                transform: rotate(-90deg) translateY(-48em) translateX(3em);
-            }
-        }
-        
-        .one{
-            background: $black;
-            color: $text-color;
-            // transform: rotate(90deg);
-            a{
-                color: $text-color;
-                &:hover{
-                    color: rgba($sub, 0.3);
-                }
+            &:hover{
+                color: $accent;
             }
         }
 
-        .two{
-            background: rgba($text-color, 1);
-            a{
-                color: $black;
-                &:hover{
-                    color: rgba($accent, 0.3);
-                }
-            }
+        span{
+            height: calc($wk-height * 0.1);
+            padding: 0.02em;
+            background: $text-color;
         }
+    }
+}
 
-        @keyframes animate {
-            0%{ transform: translateX(100%);}
-            100%{ transform: translateX(-100%);}
-        }
-        @keyframes animate2 {
-            0%{ transform: translateX(0);}
-            100%{ transform: translateX(-200%);}
+
+@media screen and (max-width: 600px) {
+    .hero{
+        aside{
+            padding: .5em;
         }
     }
 }

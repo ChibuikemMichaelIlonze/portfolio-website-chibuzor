@@ -18,15 +18,11 @@
         transition: all 0.3s ease-in-out;
 
         i{
-            transition: all 0.3s ease-in-out;
-        }
+            transition: all 200ms ease-in-out;
 
-        i:hover + span{
-            visibility: visible;
-        }
-        span{
-            visibility: hidden;
-            transition: all 0.2s ease-in-out;
+            &:hover{
+                color: $accent;
+            }
         }
 
     }
