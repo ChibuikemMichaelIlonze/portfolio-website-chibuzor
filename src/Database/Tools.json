@@ -1,0 +1,62 @@
+[
+    {
+        "image": "/images/Apache.png",
+        "title": "Apache",
+        "link": "https://spark.apache.org/"
+    },
+    {
+        "image": "/images/aws.png",
+        "title": "Amazon Web Services",
+        "link": "https://aws.amazon.com/free/?trk=2d3e6bee-b4a1-42e0-8600-6f2bb4fcb10c&sc_channel=ps&ef_id=CjwKCAjwxr2iBhBJEiwAdXECw13rxdD2uul9teuasP8dwdvTg5RTYbXaYeKWaZ7utjQyjQaRp3PsdBoCygsQAvD_BwE:G:s&s_kwcid=AL!4422!3!645125273261!e!!g!!aws!19574556887!145779846712&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all"
+    },  
+    {
+        "image": "/images/clouds.png",
+        "title": "Google Cloud",
+        "link": "https://cloud.google.com/gcp?utm_source=google&utm_medium=cpc&utm_campaign=emea-ng-all-en-bkws-all-all-trial-e-gcp-1011340&utm_content=text-ad-none-any-DEV_c-CRE_501794636575-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+~+GCP+~+General%23v1-KWID_43700061569959218-kwd-6458750523-userloc_1010297&utm_term=KW_google%20cloud-NET_g-PLAC_&&gad=1&gclid=CjwKCAjwxr2iBhBJEiwAdXECwzhB0l72Z33vpRIiI9z40psTLpcSPvT7IUC5tgpOqgmKThgAlOMQ0BoCB54QAvD_BwE&gclsrc=aw.ds"
+    },
+    {
+        "image": "/images/excels.png",
+        "title": "Microsoft excel",
+        "link": "https://support.microsoft.com/en-us/excel"
+    },
+    {
+        "image": "/images/Fivetran.png",
+        "title": "FiveTran",
+        "link": "https://www.fivetran.com/"
+    },
+    {
+        "image": "/images/PostGIS.png",
+        "title": "PostGIS",
+        "link": "https://postgis.net/"
+    },
+    {
+        "image": "/images/PostgreSQL.png",
+        "title": "PostgreSQL",
+        "link": "https://www.postgresql.org/"
+    },
+    {
+        "image": "/images/PowerBI.jpg",
+        "title": "PowerBI",
+        "link": "https://powerbi.microsoft.com/en-au/"
+    },
+    {
+        "image": "/images/Powerpoint.png",
+        "title": "Powerpoint",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/powerpoint"
+    },
+    {
+        "image": "/images/Python.png",
+        "title": "Python",
+        "link": "https://www.python.org/"
+    },
+    {
+        "image": "/images/sheets.png",
+        "title": "Google Sheets",
+        "link": "https://www.google.com/sheets/about/"
+    },
+    {
+        "image": "/images/Tableau.png",
+        "title": "Tableau",
+        "link": "https://www.tableau.com/"
+    }
+]
