@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Menu.scss';
 import 'animate.css';
 import { Link } from 'react-router-dom';

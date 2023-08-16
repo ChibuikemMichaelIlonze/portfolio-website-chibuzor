@@ -1,4 +1,3 @@
-import React from 'react'
 import './Tools.scss'
 import tools from '../../Database/Tools.json'
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Dashboard.scss'
 import 'animate.css'
 import Menu from '../../components/Menu/Menu'

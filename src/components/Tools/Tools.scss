@@ -64,6 +64,7 @@
             justify-content: flex-start;
             padding: .2em;
             border-radius: $small-radius;
+            transition: .3s ease;
 
             img{
                 height: calc($wk-height * 0.05);
