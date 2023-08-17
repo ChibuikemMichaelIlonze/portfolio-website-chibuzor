@@ -2,19 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './Footer.scss';
 
 const Footer = () => {
-  const [year, setYear] = useState(null);
-
-  useEffect(() => {
-    const date = new Date();
-    const currentYear = date.getFullYear();
-    setYear(currentYear);
-  }, []);
+const currentYear = new Date().getFullYear();
 
   return (
     <footer>
       <p>
         Copyright @
-        <span id="year">{year}</span> &bull;
+        <span id="year">{currentYear}</span> &bull;
         All rights reserved
       </p>
     </footer>
